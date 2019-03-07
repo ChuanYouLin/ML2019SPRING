@@ -84,16 +84,20 @@ def linear_re(doc):
 
 	size = c.shape[0]*c.shape[1]+1
 	
-	#loss1 = adagrad(x_train,y_train,30000,100,size,1000000)
-	loss2 = adagrad(x_train,y_train,30000,100,size,1000)
-	loss3 = adagrad(x_train,y_train,30000,100,size,100)
-	loss4 = adagrad(x_train,y_train,30000,100,size,0.0001)
+	loss1 = adagrad(x_train,y_train,40000,100,size,1000)
+	loss2 = adagrad(x_train,y_train,40000,100,size,100)
+	loss3 = adagrad(x_train,y_train,40000,100,size,0.1)
+	loss4 = adagrad(x_train,y_train,40000,100,size,0.001)
+	loss5 = adagrad(x_train,y_train,40000,100,size,0.0001)
+	loss6 = adagrad(x_train,y_train,40000,100,size,0.00001)
 
-	arrX = np.arange(0,20000)
-	#plt.plot(arrX,loss1,label='lamda=100000000000',ls='--')
-	plt.plot(arrX,loss2,label='lamda=1000',ls='--')
-	plt.plot(arrX,loss3,label='lamda=100',ls='--')
-	plt.plot(arrX,loss4,label='lamda=0.0001',ls='--')
+	arrX = np.arange(0,30000)
+	plt.plot(arrX,loss1,label='lamda=1000',ls='--')
+	plt.plot(arrX,loss2,label='lamda=100',ls='--')
+	plt.plot(arrX,loss3,label='lamda=0.1',ls='--')
+	plt.plot(arrX,loss4,label='lamda=0.001',ls='--')
+	plt.plot(arrX,loss5,label='lamda=0.0001',ls='--')
+	plt.plot(arrX,loss6,label='lamda=0.00001',ls='--')
 	plt.legend(loc='upper right')
 	plt.savefig("test.jpg")
 
