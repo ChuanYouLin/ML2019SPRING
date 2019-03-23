@@ -1,0 +1,1 @@
+python hw2_test4.py $5 $6
