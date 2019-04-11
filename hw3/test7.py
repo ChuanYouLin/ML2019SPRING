@@ -165,7 +165,7 @@ def main():
 
 	min_val = 0.0
 
-	for epoch in range(1):
+	for epoch in range(400):
 		train_loss = []
 		train_acc = []
 		model.train()
