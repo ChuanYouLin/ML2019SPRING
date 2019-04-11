@@ -105,7 +105,7 @@ class ImageDataset(Dataset):
 		'''
 		sample_y = torch.tensor(self.y_train[idx])
 
-		return [sample_x/255.0,sample_y]
+		return [sample_x,sample_y]
 
 
 def main():
