@@ -6,7 +6,6 @@ from torch.optim import Adam
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils
-from PIL import Image
 import os
 
 def load_data(doc):
