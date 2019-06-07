@@ -1,0 +1,1 @@
+python hw8_ver2.py $1
